@@ -105,4 +105,4 @@ https://open-meteo.com/en/docs
 
 Исходный код, документация и материалы проекта размещаются в репозитории GitHub:
 
-https://github.com/[ссылка-на-репозиторий]
+[https://github.com/ldlddaa/parking-occupancy-forecast-system/tree/main]
