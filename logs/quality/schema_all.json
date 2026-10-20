@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "stage": "all",
+  "passed": true,
+  "results": [
+    {
+      "file": "data/storage/parking.json",
+      "status": "passed",
+      "rows": 18422,
+      "error": ""
+    },
+    {
+      "file": "data/storage/weather.json",
+      "status": "passed",
+      "rows": 768,
+      "error": ""
+    },
+    {
+      "file": "data/processed/parking_clean.csv",
+      "status": "passed",
+      "rows": 18422,
+      "error": ""
+    },
+    {
+      "file": "data/processed/weather_clean.csv",
+      "status": "passed",
+      "rows": 768,
+      "error": ""
+    },
+    {
+      "file": "data/marts/parking_weather.csv",
+      "status": "passed",
+      "rows": 18422,
+      "error": ""
+    }
+  ]
+}

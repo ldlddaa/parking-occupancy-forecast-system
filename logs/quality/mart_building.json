@@ -1,0 +1,13 @@
+{
+  "parking_input_rows": 18422,
+  "weather_input_rows": 768,
+  "mart_rows": 18422,
+  "weather_matched": 18422,
+  "weather_missing": 0,
+  "weather_stale": 0,
+  "maximum_matched_weather_age_minutes": 55.0,
+  "parking_off_grid_rows": 2,
+  "calendar_timezone": "Europe/Rome",
+  "day_of_week_encoding": "Monday=0, Sunday=6",
+  "max_weather_age_minutes": 60.0
+}

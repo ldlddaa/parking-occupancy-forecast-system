@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "mart_rows": 18422,
+  "error_counts": {},
+  "error_examples": {},
+  "known_limitations": {
+    "off_grid_records": 2,
+    "capacity_history_unverified_records": 18422
+  }
+}

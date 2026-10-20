@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "stage": "raw",
+  "passed": true,
+  "results": [
+    {
+      "file": "data/storage/parking.json",
+      "status": "passed",
+      "rows": 18422,
+      "error": ""
+    },
+    {
+      "file": "data/storage/weather.json",
+      "status": "passed",
+      "rows": 768,
+      "error": ""
+    }
+  ]
+}

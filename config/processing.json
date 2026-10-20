@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "start_date": "2026-09-01",
+  "timezone": "UTC",
+  "parking_source": "FAMAS",
+  "parking_period_seconds": 300,
+  "off_grid_policy": "keep_and_flag",
+  "missing_policy": "leave_missing",
+  "invalid_record_policy": "quarantine",
+  "capacity_policy": "use_reference_and_flag",
+  "mart_grain": "parking_observation",
+  "weather_join": "latest_at_or_before",
+  "max_weather_age_minutes": 60,
+  "calendar_timezone": "Europe/Rome"
+}

@@ -1,0 +1,81 @@
+{
+  "run_id": "84932c4330754ed0b20a64f1d7a82e99",
+  "started_at_utc": "2026-10-20T21:00:29.839321+00:00",
+  "finished_at_utc": "2026-10-20T21:00:34.751356+00:00",
+  "status": "success",
+  "steps": [
+    {
+      "name": "Проверка структуры входных данных",
+      "script": "check_schema.py",
+      "arguments": [
+        "--stage",
+        "raw"
+      ],
+      "started_at_utc": "2026-10-20T21:00:29.839669+00:00",
+      "finished_at_utc": "2026-10-20T21:00:30.234882+00:00",
+      "status": "success",
+      "return_code": 0,
+      "error": ""
+    },
+    {
+      "name": "Проверка справочника парковок",
+      "script": "load_reference.py",
+      "arguments": [],
+      "started_at_utc": "2026-10-20T21:00:30.235814+00:00",
+      "finished_at_utc": "2026-10-20T21:00:30.939009+00:00",
+      "status": "success",
+      "return_code": 0,
+      "error": ""
+    },
+    {
+      "name": "Обработка парковочных данных",
+      "script": "prepare_parking.py",
+      "arguments": [],
+      "started_at_utc": "2026-10-20T21:00:30.939980+00:00",
+      "finished_at_utc": "2026-10-20T21:00:31.851692+00:00",
+      "status": "success",
+      "return_code": 0,
+      "error": ""
+    },
+    {
+      "name": "Обработка погодных данных",
+      "script": "prepare_weather.py",
+      "arguments": [],
+      "started_at_utc": "2026-10-20T21:00:31.852511+00:00",
+      "finished_at_utc": "2026-10-20T21:00:31.907075+00:00",
+      "status": "success",
+      "return_code": 0,
+      "error": ""
+    },
+    {
+      "name": "Построение аналитической витрины",
+      "script": "build_mart.py",
+      "arguments": [],
+      "started_at_utc": "2026-10-20T21:00:31.907840+00:00",
+      "finished_at_utc": "2026-10-20T21:00:32.587967+00:00",
+      "status": "success",
+      "return_code": 0,
+      "error": ""
+    },
+    {
+      "name": "Проверка структуры всех таблиц",
+      "script": "check_schema.py",
+      "arguments": [],
+      "started_at_utc": "2026-10-20T21:00:32.588535+00:00",
+      "finished_at_utc": "2026-10-20T21:00:33.740646+00:00",
+      "status": "success",
+      "return_code": 0,
+      "error": ""
+    },
+    {
+      "name": "Проверка качества витрины",
+      "script": "check_quality.py",
+      "arguments": [],
+      "started_at_utc": "2026-10-20T21:00:33.742041+00:00",
+      "finished_at_utc": "2026-10-20T21:00:34.750441+00:00",
+      "status": "success",
+      "return_code": 0,
+      "error": ""
+    }
+  ]
+}

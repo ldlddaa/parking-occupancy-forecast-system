@@ -1,0 +1,12 @@
+{
+  "input_records": 768,
+  "clean_records": 768,
+  "rejected_records": 0,
+  "removed_duplicates": 0,
+  "off_grid_records": 0,
+  "missing_hours": 0,
+  "requested_latitude": 46.4983,
+  "requested_longitude": 11.3548,
+  "start_utc": "2026-09-01T00:00:00+00:00",
+  "end_utc_exclusive": "2026-10-03T00:00:00+00:00"
+}

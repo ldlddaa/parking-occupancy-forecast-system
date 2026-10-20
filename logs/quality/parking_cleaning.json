@@ -1,0 +1,14 @@
+{
+  "input_records": 18422,
+  "clean_records": 18422,
+  "rejected_records": 0,
+  "removed_duplicates": 0,
+  "off_grid_records": 2,
+  "missing_grid_points_by_station": {
+    "103": 8,
+    "106": 4
+  },
+  "capacity_history_unverified_records": 18422,
+  "start_utc": "2026-09-01T00:00:00+00:00",
+  "end_utc_exclusive": "2026-10-03T00:00:00+00:00"
+}

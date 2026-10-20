@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "allow_extra_raw_fields": true,
+  "allow_extra_prepared_columns": false,
+  "raw_parking_required_fields": [
+    "scode",
+    "sorigin",
+    "mperiod",
+    "mvalidtime",
+    "mvalue"
+  ],
+  "raw_weather_required_fields": [
+    "time",
+    "temperature_2m (°C)",
+    "precipitation (mm)",
+    "cloud_cover (%)",
+    "wind_speed_10m (km/h)"
+  ],
+  "parking_columns": [
+    "station_code",
+    "station_name",
+    "timestamp_utc",
+    "timestamp_original",
+    "source",
+    "period_seconds",
+    "occupied",
+    "capacity",
+    "occupancy_pct",
+    "is_on_grid",
+    "capacity_reference_date",
+    "capacity_history_verified"
+  ],
+  "weather_columns": [
+    "timestamp_utc",
+    "timestamp_original",
+    "temperature_c",
+    "precipitation_mm",
+    "cloud_cover_pct",
+    "wind_speed_kmh",
+    "is_on_grid"
+  ],
+  "mart_extra_columns": [
+    "weather_timestamp_utc",
+    "weather_age_minutes",
+    "weather_status",
+    "temperature_c",
+    "precipitation_mm",
+    "cloud_cover_pct",
+    "wind_speed_kmh",
+    "timestamp_local",
+    "date_local",
+    "hour_local",
+    "day_of_week",
+    "is_weekend"
+  ]
+}
