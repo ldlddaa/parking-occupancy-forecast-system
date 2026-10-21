@@ -1,0 +1,7 @@
+﻿station_code,station_name,model,test_rows,mae,rmse,clipped_predictions,selected_by_validation,mae_improvement_vs_persistence_pct
+103,P03 - Piazza Walther,persistence,1682,5.302826910820452,12.328102808923326,0,false,0.0
+103,P03 - Piazza Walther,linear_regression,1682,6.267253248262525,12.134318095037754,31,true,-18.187022764672083
+103,P03 - Piazza Walther,random_forest,1682,8.822878523816835,16.276886226008635,0,false,-66.38066209201915
+106,P06 - Lauben Parking Portici,persistence,1682,3.0656522092746727,4.54649118710658,0,false,0.0
+106,P06 - Lauben Parking Portici,linear_regression,1682,2.419156667570774,3.3309441570240192,0,false,21.088352414798496
+106,P06 - Lauben Parking Portici,random_forest,1682,2.2729448719472036,3.4475008249756574,0,true,25.85770606754581

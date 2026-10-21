@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "settings": {
+    "schema_version": 1,
+    "lag_minutes": [
+      5,
+      15,
+      30,
+      60,
+      1440
+    ],
+    "rolling_window_minutes": [
+      30,
+      60
+    ],
+    "rolling_include_current": true,
+    "require_complete_windows": true,
+    "missing_feature_policy": "drop",
+    "calendar_timezone": "Europe/Rome",
+    "calendar_timestamp": "target"
+  },
+  "forecasting_settings": {
+    "schema_version": 1,
+    "target_column": "occupancy_pct",
+    "forecast_horizon_minutes": 60,
+    "target_join": "exact_timestamp",
+    "off_grid_policy": "exclude",
+    "missing_target_policy": "drop",
+    "start_utc": "2026-09-01T00:00:00+00:00",
+    "train_until_utc": "2026-09-21T00:00:00+00:00",
+    "validation_until_utc": "2026-09-27T00:00:00+00:00",
+    "test_until_utc": "2026-10-03T00:00:00+00:00",
+    "weather_features": false
+  },
+  "input_rows": 18336,
+  "output_rows": 17652,
+  "excluded_rows": {
+    "missing_lag": 631,
+    "incomplete_window": 53
+  },
+  "exclusion_priority": [
+    "missing_lag",
+    "incomplete_window"
+  ],
+  "feature_columns": [
+    "occupancy_now_pct",
+    "occupancy_lag_5m",
+    "occupancy_lag_15m",
+    "occupancy_lag_30m",
+    "occupancy_lag_60m",
+    "occupancy_lag_1440m",
+    "occupancy_mean_30m",
+    "occupancy_mean_60m",
+    "target_hour_sin",
+    "target_hour_cos",
+    "target_weekday_sin",
+    "target_weekday_cos",
+    "target_is_weekend"
+  ],
+  "feature_count": 13,
+  "rolling_window_definition": "(issue_time - window, issue_time]",
+  "evaluation_mode": "sequential_one_hour_ahead_with_observed_history",
+  "split_counts": {
+    "train": {
+      "103": {
+        "before": 5740,
+        "after": 5424
+      },
+      "106": {
+        "before": 5748,
+        "after": 5460
+      }
+    },
+    "validation": {
+      "103": {
+        "before": 1714,
+        "after": 1702
+      },
+      "106": {
+        "before": 1714,
+        "after": 1702
+      }
+    },
+    "test": {
+      "103": {
+        "before": 1710,
+        "after": 1682
+      },
+      "106": {
+        "before": 1710,
+        "after": 1682
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "source_file": "data/marts/parking_weather.csv",
+  "output_file": "data/modeling/forecast_targets.csv",
+  "settings": {
+    "schema_version": 1,
+    "target_column": "occupancy_pct",
+    "forecast_horizon_minutes": 60,
+    "target_join": "exact_timestamp",
+    "off_grid_policy": "exclude",
+    "missing_target_policy": "drop",
+    "start_utc": "2026-09-01T00:00:00+00:00",
+    "train_until_utc": "2026-09-21T00:00:00+00:00",
+    "validation_until_utc": "2026-09-27T00:00:00+00:00",
+    "test_until_utc": "2026-10-03T00:00:00+00:00",
+    "weather_features": false
+  },
+  "input_rows": 18422,
+  "output_rows": 18336,
+  "excluded_rows": {
+    "missing_target": 12,
+    "target_outside_split": 72,
+    "off_grid": 2
+  },
+  "split_counts": {
+    "train": {
+      "103": 5740,
+      "106": 5748
+    },
+    "validation": {
+      "103": 1714,
+      "106": 1714
+    },
+    "test": {
+      "103": 1710,
+      "106": 1710
+    }
+  },
+  "capacity_unverified_rows": 18336,
+  "target_matching": "same_station_at_exact_horizon",
+  "boundary_rule": "issue_and_target_in_same_split"
+}

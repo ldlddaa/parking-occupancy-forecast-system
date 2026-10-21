@@ -1,0 +1,73 @@
+{
+  "status": "success",
+  "training_run_id": "94390dfca7834fcebc35705b9a0eed64",
+  "evaluated_at_utc": "2026-10-21T06:48:48.778706+00:00",
+  "model_manifest_sha256": "d5b56f2835f2e150ccda486bad5e1ba8f6d4d07a93858bb3150598c1333f5b95",
+  "test_start_utc": "2026-09-27T00:00:00+00:00",
+  "test_end_utc_exclusive": "2026-10-03T00:00:00+00:00",
+  "forecast_horizon_minutes": 60,
+  "calendar_timezone": "Europe/Rome",
+  "test_rows": 3364,
+  "selection_source": "validation",
+  "models_refitted": false,
+  "evaluation_mode": "sequential_one_hour_ahead_with_observed_history",
+  "error_units": "percentage_points",
+  "stations": {
+    "103": {
+      "station_name": "P03 - Piazza Walther",
+      "test_rows": 1682,
+      "selected_model_by_validation": "linear_regression",
+      "test_metrics": {
+        "persistence": {
+          "mae": 5.302826910820452,
+          "rmse": 12.328102808923326,
+          "clipped_predictions": 0
+        },
+        "linear_regression": {
+          "mae": 6.267253248262525,
+          "rmse": 12.134318095037754,
+          "clipped_predictions": 31
+        },
+        "random_forest": {
+          "mae": 8.822878523816835,
+          "rmse": 16.276886226008635,
+          "clipped_predictions": 0
+        }
+      },
+      "selected_model_mae_improvement_pct": -18.187022764672083
+    },
+    "106": {
+      "station_name": "P06 - Lauben Parking Portici",
+      "test_rows": 1682,
+      "selected_model_by_validation": "random_forest",
+      "test_metrics": {
+        "persistence": {
+          "mae": 3.0656522092746727,
+          "rmse": 4.54649118710658,
+          "clipped_predictions": 0
+        },
+        "linear_regression": {
+          "mae": 2.419156667570774,
+          "rmse": 3.3309441570240192,
+          "clipped_predictions": 0
+        },
+        "random_forest": {
+          "mae": 2.2729448719472036,
+          "rmse": 3.4475008249756574,
+          "clipped_predictions": 0
+        }
+      },
+      "selected_model_mae_improvement_pct": 25.85770606754581
+    }
+  },
+  "artifacts": {
+    "metrics": {
+      "path": "reports/models/test_metrics.csv",
+      "sha256": "8b5479de9d24a6739c9686899d88329959ac55d152214ef8879080f2de4618f8"
+    },
+    "predictions": {
+      "path": "reports/models/test_predictions.csv",
+      "sha256": "7a1fea5ccb2e36fe155a9791907eac1cb101d843b85a542a124a4773a430c6a5"
+    }
+  }
+}

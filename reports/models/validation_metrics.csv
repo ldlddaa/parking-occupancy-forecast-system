@@ -1,0 +1,7 @@
+﻿station_code,model,candidate,parameters,validation_rows,mae,rmse,clipped_predictions
+103,persistence,persistence,{},1702,6.130431878378379,13.36933253475866,0
+103,linear_regression,linear_regression,"{""fit_intercept"": true}",1702,4.852806857922501,11.859669900289342,32
+103,random_forest,random_forest_3,"{""max_depth"": 16, ""min_samples_leaf"": 5, ""n_estimators"": 200, ""n_jobs"": 2, ""random_state"": 42}",1702,6.586195809608214,11.7762452896076,0
+106,persistence,persistence,{},1702,3.547793321386604,4.988738313386241,0
+106,linear_regression,linear_regression,"{""fit_intercept"": true}",1702,2.6999646976699805,3.73420144722098,0
+106,random_forest,random_forest_4,"{""max_depth"": 16, ""min_samples_leaf"": 15, ""n_estimators"": 200, ""n_jobs"": 2, ""random_state"": 42}",1702,2.6579159946304207,3.6951024764136093,0

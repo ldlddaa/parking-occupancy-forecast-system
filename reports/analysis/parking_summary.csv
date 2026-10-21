@@ -1,0 +1,3 @@
+﻿station_code,station_name,observations,first_timestamp_utc,last_timestamp_utc,mean_occupancy_pct,median_occupancy_pct,min_occupancy_pct,max_occupancy_pct,off_grid_observations,capacity_unverified_observations
+103,P03 - Piazza Walther,5756,2026-09-01T00:00:00+00:00,2026-09-20T23:55:00+00:00,38.6377,33.2506,13.647643,100.0,0,5756
+106,P06 - Lauben Parking Portici,5760,2026-09-01T00:00:00+00:00,2026-09-20T23:55:00+00:00,64.5561,61.22,41.394336,100.0,0,5760

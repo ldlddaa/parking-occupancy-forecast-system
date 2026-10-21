@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "lag_minutes": [5, 15, 30, 60, 1440],
+  "rolling_window_minutes": [30, 60],
+  "rolling_include_current": true,
+  "require_complete_windows": true,
+  "missing_feature_policy": "drop",
+  "calendar_timezone": "Europe/Rome",
+  "calendar_timestamp": "target"
+}

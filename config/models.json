@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "random_state": 42,
+  "selection_metric": "mae",
+  "prediction_min_pct": 0,
+  "prediction_max_pct": 100,
+  "linear_regression": {
+    "fit_intercept": true
+  },
+  "random_forest": {
+    "n_estimators": 200,
+    "max_depth_candidates": [8, 16],
+    "min_samples_leaf_candidates": [5, 15],
+    "n_jobs": 2
+  }
+}

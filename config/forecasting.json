@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "target_column": "occupancy_pct",
+  "forecast_horizon_minutes": 60,
+  "target_join": "exact_timestamp",
+  "off_grid_policy": "exclude",
+  "missing_target_policy": "drop",
+  "start_utc": "2026-09-01T00:00:00+00:00",
+  "train_until_utc": "2026-09-21T00:00:00+00:00",
+  "validation_until_utc": "2026-09-27T00:00:00+00:00",
+  "test_until_utc": "2026-10-03T00:00:00+00:00",
+  "weather_features": false
+}

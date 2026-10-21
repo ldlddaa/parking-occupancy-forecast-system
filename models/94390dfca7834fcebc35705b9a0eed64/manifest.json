@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "status": "success",
+  "run_id": "94390dfca7834fcebc35705b9a0eed64",
+  "started_at_utc": "2026-10-21T06:40:16.285228+00:00",
+  "finished_at_utc": "2026-10-21T06:40:35.622547+00:00",
+  "versions": {
+    "python": "3.14.2",
+    "scikit_learn": "1.9.1",
+    "numpy": "2.5.4",
+    "joblib": "1.6.0"
+  },
+  "feature_columns": [
+    "occupancy_now_pct",
+    "occupancy_lag_5m",
+    "occupancy_lag_15m",
+    "occupancy_lag_30m",
+    "occupancy_lag_60m",
+    "occupancy_lag_1440m",
+    "occupancy_mean_30m",
+    "occupancy_mean_60m",
+    "target_hour_sin",
+    "target_hour_cos",
+    "target_weekday_sin",
+    "target_weekday_cos",
+    "target_is_weekend"
+  ],
+  "model_settings": {
+    "schema_version": 1,
+    "random_state": 42,
+    "selection_metric": "mae",
+    "prediction_min_pct": 0,
+    "prediction_max_pct": 100,
+    "linear_regression": {
+      "fit_intercept": true
+    },
+    "random_forest": {
+      "n_estimators": 200,
+      "max_depth_candidates": [
+        8,
+        16
+      ],
+      "min_samples_leaf_candidates": [
+        5,
+        15
+      ],
+      "n_jobs": 2
+    }
+  },
+  "forecasting_settings": {
+    "schema_version": 1,
+    "target_column": "occupancy_pct",
+    "forecast_horizon_minutes": 60,
+    "target_join": "exact_timestamp",
+    "off_grid_policy": "exclude",
+    "missing_target_policy": "drop",
+    "start_utc": "2026-09-01T00:00:00+00:00",
+    "train_until_utc": "2026-09-21T00:00:00+00:00",
+    "validation_until_utc": "2026-09-27T00:00:00+00:00",
+    "test_until_utc": "2026-10-03T00:00:00+00:00",
+    "weather_features": false
+  },
+  "features_settings": {
+    "schema_version": 1,
+    "lag_minutes": [
+      5,
+      15,
+      30,
+      60,
+      1440
+    ],
+    "rolling_window_minutes": [
+      30,
+      60
+    ],
+    "rolling_include_current": true,
+    "require_complete_windows": true,
+    "missing_feature_policy": "drop",
+    "calendar_timezone": "Europe/Rome",
+    "calendar_timestamp": "target"
+  },
+  "input_files_sha256": {
+    "data/modeling/forecast_features.csv": "dbd095bb3cf2c0c1fbb995afb2958770744883dc98393590418a39cb9ce78056",
+    "logs/quality/forecast_features.json": "b2728ce14e5278088ba2d478fd6c0f48b2af491a08fd42c86a152d56c210aecb",
+    "config/models.json": "f68693ca90d5098faa8593a30d297e36f40f69293a51fca702a77f07f9d9d443",
+    "config/forecasting.json": "479552e5b5145a931a8d62e333e20c7ee707d6bbe78e273ee298e1a762c39f76",
+    "config/features.json": "8002ddb3e7391d2d802022ef4ae017dab2226b4ea99e5a403e64cf021189f22c"
+  },
+  "fit_split": "train",
+  "selection_split": "validation",
+  "test_used_for_fit_or_selection": false,
+  "refit_on_validation": false,
+  "tie_break": "first_candidate_in_config_order; persistence_then_linear_then_forest",
+  "stations": {
+    "103": {
+      "station_name": "P03 - Piazza Walther",
+      "train_rows": 5424,
+      "validation_rows": 1702,
+      "validation_metrics": {
+        "persistence": {
+          "mae": 6.130431878378379,
+          "rmse": 13.36933253475866,
+          "clipped_predictions": 0
+        },
+        "linear_regression": {
+          "mae": 4.852806857922501,
+          "rmse": 11.859669900289342,
+          "clipped_predictions": 32
+        },
+        "random_forest": {
+          "mae": 6.586195809608214,
+          "rmse": 11.7762452896076,
+          "clipped_predictions": 0
+        }
+      },
+      "preferred_model_by_validation": "linear_regression",
+      "selected_random_forest_parameters": {
+        "n_estimators": 200,
+        "max_depth": 16,
+        "min_samples_leaf": 5,
+        "random_state": 42,
+        "n_jobs": 2
+      },
+      "model_files": {
+        "linear_regression": {
+          "path": "models/94390dfca7834fcebc35705b9a0eed64/103_linear_regression.joblib",
+          "sha256": "e075f376cae94ca4cc394d35337414c6a289b16f81387e694b0ed71f507c7c9f"
+        },
+        "random_forest": {
+          "path": "models/94390dfca7834fcebc35705b9a0eed64/103_random_forest.joblib",
+          "sha256": "fe5606d0c0182c1a39666559ed057f84bf94b1bce13641b5f59440bcf79159aa"
+        }
+      }
+    },
+    "106": {
+      "station_name": "P06 - Lauben Parking Portici",
+      "train_rows": 5460,
+      "validation_rows": 1702,
+      "validation_metrics": {
+        "persistence": {
+          "mae": 3.547793321386604,
+          "rmse": 4.988738313386241,
+          "clipped_predictions": 0
+        },
+        "linear_regression": {
+          "mae": 2.6999646976699805,
+          "rmse": 3.73420144722098,
+          "clipped_predictions": 0
+        },
+        "random_forest": {
+          "mae": 2.6579159946304207,
+          "rmse": 3.6951024764136093,
+          "clipped_predictions": 0
+        }
+      },
+      "preferred_model_by_validation": "random_forest",
+      "selected_random_forest_parameters": {
+        "n_estimators": 200,
+        "max_depth": 16,
+        "min_samples_leaf": 15,
+        "random_state": 42,
+        "n_jobs": 2
+      },
+      "model_files": {
+        "linear_regression": {
+          "path": "models/94390dfca7834fcebc35705b9a0eed64/106_linear_regression.joblib",
+          "sha256": "e3a8c51b250621c788f4cc98bc592581055264e7f4c1ee2d4552513a42375b87"
+        },
+        "random_forest": {
+          "path": "models/94390dfca7834fcebc35705b9a0eed64/106_random_forest.joblib",
+          "sha256": "e3a31bd9f1b1a5b3ec7f4ede848af68df626bffe7699962dafae2eba1b539e5e"
+        }
+      }
+    }
+  }
+}

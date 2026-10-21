@@ -1,0 +1,39 @@
+{
+  "source_file": "data/marts/parking_weather.csv",
+  "start_utc": "2026-09-01T00:00:00+00:00",
+  "end_utc_exclusive": "2026-09-21T00:00:00+00:00",
+  "calendar_timezone": "Europe/Rome",
+  "input_rows": 18422,
+  "analyzed_rows": 11516,
+  "averaging": "arithmetic_mean_of_available_observations",
+  "missing_values": "not_filled",
+  "matplotlib_version": "3.11.2",
+  "stations": [
+    {
+      "station_code": "103",
+      "station_name": "P03 - Piazza Walther",
+      "observations": 5756,
+      "first_timestamp_utc": "2026-09-01T00:00:00+00:00",
+      "last_timestamp_utc": "2026-09-20T23:55:00+00:00",
+      "mean_occupancy_pct": 38.6377,
+      "median_occupancy_pct": 33.2506,
+      "min_occupancy_pct": 13.647643,
+      "max_occupancy_pct": 100.0,
+      "off_grid_observations": 0,
+      "capacity_unverified_observations": 5756
+    },
+    {
+      "station_code": "106",
+      "station_name": "P06 - Lauben Parking Portici",
+      "observations": 5760,
+      "first_timestamp_utc": "2026-09-01T00:00:00+00:00",
+      "last_timestamp_utc": "2026-09-20T23:55:00+00:00",
+      "mean_occupancy_pct": 64.5561,
+      "median_occupancy_pct": 61.22,
+      "min_occupancy_pct": 41.394336,
+      "max_occupancy_pct": 100.0,
+      "off_grid_observations": 0,
+      "capacity_unverified_observations": 5760
+    }
+  ]
+}

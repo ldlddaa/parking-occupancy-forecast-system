@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "training_run_id": "94390dfca7834fcebc35705b9a0eed64",
+  "test_report_sha256": "89cb84f44ea33e01b2337b42fb4480768d0231a684ee228599c61d2edaaddb73",
+  "test_rows": 3364,
+  "calendar_timezone": "Europe/Rome",
+  "displayed_period": "entire_test_period",
+  "figures": [
+    {
+      "path": "reports/models/figures/test_forecast_103.png",
+      "sha256": "01f069c7c149527360d1b0fe65102843ea6802866f43b3939f486205fad25e7f"
+    },
+    {
+      "path": "reports/models/figures/test_forecast_106.png",
+      "sha256": "54e9c09aa2bfe75d7b1a0101cbd002ea7741685c9e4ae5cbf5cb6b340b3f6930"
+    },
+    {
+      "path": "reports/models/figures/test_metrics_comparison.png",
+      "sha256": "e24fb4c25d842ce80beed0258bc67f25c16238907c48146c14320e04b91d1dab"
+    }
+  ]
+}
